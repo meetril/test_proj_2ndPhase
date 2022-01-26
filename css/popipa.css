@@ -1,0 +1,821 @@
+body {
+    background-color:  #faa2c0;
+    font-family: newFont;
+    margin: 0;
+}
+
+@font-face {
+    font-family: newFont;
+    src: url("../fonts/OT-tt/Blogger\ Sans-Medium.ttf");
+}
+
+header {
+    background-color: rgb(231, 166, 212);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(77, 3, 54);
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.button {
+    background-color: rgb(231, 166, 212);
+    color: rgb(28, 0, 32);
+    padding: 0 10 0 10;
+    font-size: 70px;
+    height: 70px;
+    border: none;
+}
+ 
+#bands {
+    font-weight: bold;
+    padding: 6 0 0 5;
+    position: relative;
+    top: -12px;
+    left: -15px;
+    display: inline-block;
+}
+  
+#content {
+    display: none;
+    position: absolute;
+    border: 1px solid rgb(77, 3, 54);
+    background-color: rgb(243, 222, 237);
+    min-width: 185px;
+}
+
+.ppp, .afr, .pspr, .rsl, .hhh, .mnc, .ras {
+    border: 1px solid rgb(77, 3, 54);
+}
+  
+#content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#content a:hover {
+    transition: color, font-size 0.1s ease-out 100ms;
+    font-size: 105%;
+    color: white;
+}
+  
+#content .ppp:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #FF3377;
+}
+
+#content .afr:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #E53344;
+}
+
+#content .pspr:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #2dbb90;
+}
+
+#content .rsl:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #3344AA;
+}
+
+#content .hhh:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #ccb101;
+}
+
+#content .mnc:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #33AAFF;
+}
+
+#content .ras:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #22CCCC;
+}
+
+#bands:hover #content {
+    display: block;
+}
+  
+#bands:hover .button {
+    background-color: rgb(139, 72, 119);
+}
+
+#bandname {
+    display: flex;
+    position: relative;
+    top: -3px;
+    right: -18px;
+    font-size: 60px;
+    padding-right: 10px;    
+}
+
+#bandicon {
+    position: relative;
+    top: 10px;
+    right: -14px;
+    padding-right: 25px;
+}
+
+#lefthead {
+    display: flex;
+    color: #c0174f;
+    padding: 0 0 0 15;
+    float: left;
+}
+
+#righthead {
+    position: relative;
+    top: 2px;
+    overflow: auto;
+    padding-right: 5px;
+    float: right;
+}
+
+#lefthead img, #righthead img {
+    padding-right: 5px;
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+}
+
+#lefthead a:hover img, #righthead a:hover img {
+    opacity: 0.25;
+}
+
+#righthead img {
+    padding: 0 5 0 5;
+}
+
+.yt_en {
+    padding-right: 15px;
+}
+
+.yt {
+    border-radius: 50%;
+}
+
+#banner {
+    text-align: center; 
+    border-bottom: 2px solid #57001d;
+}
+
+#banner img {
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+}
+
+#toc {
+    position: relative;
+    font-size: 22;
+    top: 35px;
+    background: white;
+    border: 2px solid #57001d;
+    width: 375px;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+}
+
+#tocalign {
+    justify-content: center;
+    display: flex;
+}
+
+#toc1 {
+    color: #faa2c0;
+    position: relative;
+    font-size: 0;
+    top: 35px;
+    background: #faa2c0;
+    border: 2px solid #faa2c0;
+    width: 395px;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+}
+
+#toc1 a{
+    color: #faa2c0;
+}
+
+#toc ul {
+    position: relative;
+    right: 25px;
+    list-style: none;
+}
+
+#toc a {
+    text-decoration: none;
+}
+
+#toc a:link, #toc a:visited {
+    color: #993556;
+}
+
+#toc li:hover {
+    transition: background-color 0.1s ease-out 50ms;
+    background-color: #ebd0d9;
+}
+
+#band_bg {
+    padding-top: 30px;
+}
+
+#band_bg, #band_media, #band_chars, #band_seiyuus, #band_songs, #band_lives {
+    width: 1300px;
+    margin: auto;
+}
+
+#band_bg h2, #band_media h2, #band_chars h2, #band_seiyuus h2, #band_songs h2, #band_lives h2 {
+    font-size: 36;
+    color: #47031a;
+}
+
+#band_bg1 {
+    font-size: 0px;
+    position: relative;
+    top: -50px;
+}
+
+#band_media1, #band_chars1, #band_seiyuus1, #band_songs1, #band_lives1  {
+    font-size: 0px;
+    position: relative;
+    top: -85px;     
+}
+
+#desc {
+    background-color: #fde7ef;
+    width: 1250px;
+    margin: auto;
+    border: 2px solid #57001d;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+    font-size: 22;
+}
+
+#cont {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+#cont_third {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    text-align: justify;
+    padding-right: 35;
+}
+
+.shish {
+    width: 100%;
+    text-align: center;
+}
+
+#picimg1 {
+    padding-right: 25;
+}
+
+#cont_L {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding-bottom: 0;
+}
+
+#cont h2 {
+    margin-top: 0;
+}
+
+#cont_L h2, #desc h2 {
+    font-size: 30;
+    margin-top: 0;
+}
+
+#mnkbg {
+    width: 100%;
+    text-align: center;
+}
+
+#mnkbg img {
+    padding: 0 25 0 5;
+}
+
+#story {
+    width: 100%;
+    text-align: center;
+}
+
+.awww {
+    padding-right: 25;
+}
+
+#movie {
+    text-align: center;
+}
+
+.char {
+    width: 15%;
+    height: 250px;
+    padding-right: 25px;
+}
+
+#charinfo {
+    position: absolute;
+    font-size: 19;
+}
+
+#actinfo, #actinfo1 {
+    width: 187;
+    height: 250;
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: .25s ease;
+    background-color: #000000;
+}
+
+#actinfo1 {
+    width: 180;
+}
+
+#charinfo:hover #actinfo, #charinfo:hover #actinfo1 {
+    opacity: 0.75;
+}
+
+#fixing {
+    padding-top: 50%;
+}
+
+#indivdesc {
+    height: 100%;
+    margin: auto;
+}
+
+#indivdesc h2 {
+    margin-top: 0;
+}
+
+.kasumi {
+    color: #FF5522;
+}
+
+.otae {
+    color: #0077DD;
+}
+
+.rimi {
+    color: #FF55BB;
+}
+
+.saaya {
+    color: #e4b409;
+}
+
+.arisa {
+    color: #AA66DD;
+}
+
+#cont_albums {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#cont_albums img {
+    margin-left: 120px;
+    position: relative;
+    right: 55px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#cont_albums div {
+    text-align: center;
+}
+
+#songlist_e ul, #songlist_e2 ul{
+    padding-top: 25px;
+    text-align: left;
+    font-size: 20;
+    width: 300%;
+    margin-left: 30px;
+}
+
+#songlist_e3 ul {
+    padding-top: 25px;
+    text-align: left;
+    font-size: 20;
+    width: 300%;
+    margin-left: -35;
+}
+
+#songlist_e4 ul {
+    padding-top: 25px;
+    text-align: left;
+    font-size: 20;
+    width: 300%;
+    margin-left: 5;
+}
+
+#songlist_e li, #songlist_e2 li, #songlist_e4 li{
+    padding-top: 20px;
+}
+
+#songlist_e3 li{
+    padding-top: 15;
+}
+
+#songlist_e div, #songlist_e3 div, #songlist_e4 div {
+    padding: 50px;
+    margin-right: 100px;
+}
+
+#songlist_e {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 11 280 25 -90;
+    position: relative;
+    left: -10px;
+}
+
+#songlist_e2 div {
+    padding: 43px;
+}
+
+#songlist_e2 {
+    width: 500px;
+    padding-bottom: 25;
+    display: flex;
+    justify-content: center;
+    margin: 11 280 25 -90;
+    position: relative;
+    left: -74px;
+}
+
+#songlist_e3 {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 11 280 25 -90;
+    position: relative;
+    left: 20px;
+}
+
+#songlist_e4 {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 11 280 25 -90;
+    position: relative;
+    left: 75px;
+}
+
+#albtitle h4, #albtitle2 h4, #albtitle3 h4, #albtitle4 h4{
+    width: 200%;
+}
+
+.po2 {
+    position: relative;
+    right: 45px;
+}
+
+#albtitle2 {
+    position: relative;
+    right: 50px;
+}
+
+#albtitle3 {
+    position: relative;
+    left: 25;
+}
+
+#albtitle4 {
+    position: relative;
+    right: 40;
+}
+
+.bt_reg {
+    position: relative;
+    left: 25;
+}
+
+#albtitle, #albtitle2{
+    color: #eb4c81;
+}
+
+#albtitle3, #albtitle4 {
+    color: purple;
+}
+
+#albtitle span, #albtitle2 span, #albtitle3 span, #albtitle4 span {
+    font-size: 28;
+}
+
+#songlist_w ul{
+    text-align: left;
+    font-size: 20;
+    width: 200%;
+}
+
+#songlist_w {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 25 -125; 
+}
+
+#audiomm, #audiomm1{
+    text-align: center;
+    z-index: 1;
+}
+
+#audiomm div, #audiomm1 div {
+    color: #ad1c4d;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#audiomm1 {
+    background-color: #fdd0df;
+    border: 2px solid #440419;
+    border-radius: 22px;
+    padding: 13;
+    bottom: 0;
+    right: 0;
+    position: fixed; 
+}
+
+.kaibutsu {
+    margin-top: 25;
+}
+
+#others_title {
+    position: relative;
+    top: 15px;
+    right: 40;
+    font-size: 26;
+}
+
+#others {
+    position: relative;
+    top: 15px;
+    display: flex;
+    font-size: 20;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#others li {
+    padding-top: 8px;
+}
+
+#covers1, #covers2 {
+    padding-top: 20px;
+    display: flex;
+    font-size: 20;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
+.rtc {
+    position: relative;
+    right: 80px;
+}
+
+#covers1 ul {
+    position: relative;
+    top: 15;
+    left: 85;
+    margin-right: 135px;
+}
+
+#covers2 ul {
+    position: relative;
+    top: 15;
+    right: 145;
+    margin-left: 135px;
+}
+
+#covers1 li, #covers2 li {
+    width: 200%;
+    padding-top: 3;
+}
+
+#others_orig {
+    display: flex;
+    font-size: 20;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+#others_title {
+    display: flex;
+    width: 65%;
+    padding-left: 50px;
+    justify-content: space-between;
+}
+
+#others_title2 {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.t1 {
+    position: relative; 
+    left: 115px;
+    bottom: 30px;
+}
+
+.t2 {
+    position: relative;
+    right: 40;
+    bottom: 30px;
+}
+
+#others_list {
+    display: flex;
+    font-size: 20;
+    width: 100%;
+}
+
+#other_cov1 {
+    position: relative;
+    left: 175px;
+    bottom: 25px;
+}
+
+#other_cov2 {
+    position: relative;
+    left: 400px;
+    bottom: 25px;
+}
+
+#other_cov1 li, #other_cov2 li {
+    padding-top: 3;
+}
+
+#dmt {
+    padding-bottom: 15;
+}
+
+#extra {
+    font-size: 20;
+    display: flex;
+    margin: auto;
+}
+
+#extra ul {
+    padding: 0 150 0 100;
+}
+
+#livepics, #livepics1 {
+    position: relative;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+#livepics1 {
+    padding-bottom: 25px;
+}
+
+.pic0 {
+    padding-top: 35;
+}
+
+.pic1 {
+    padding-top: 20;
+}
+
+.pic2 {
+    padding-top: 65;
+}
+
+#kdhr {
+    position: relative;
+    left: 20px;
+}
+
+#live_list, #live_list1 {
+    width: 80%;
+    margin: auto;
+}
+
+#live_list1 ul{
+    position: relative;
+    right: 30;
+}
+
+#live_list h3 {
+    margin-left: 35px;
+    font-size: 28;
+    text-align: center;
+}
+
+#live_list1 h3 {
+    position: relative;
+    right: 15;
+    font-size: 28;
+    text-align: center;
+}
+
+#live_list ul, #live_list1 ul {
+    list-style: none;
+}
+
+#live_list li, #live_list1 li {
+    margin-bottom: 25px;
+}
+
+#cont_live1, #cont_live2 {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.shish {
+    padding-left: 30;
+}
+
+#ebotitle {
+    color: #ad1c4d;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#ebovid {
+    padding-top: 10px;
+}
+
+.lv30title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.backtotop {
+    font-size: 20;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.backtotop a {
+    color: #851037;
+}
+
+.backtotop a:hover {
+    color: rgb(211, 44, 127);
+    transition: color 0.2s ease-out 100ms;
+}
+
+footer {
+    margin-top: 25px;
+    background-color: rgb(231, 166, 212);
+    width: 100%;
+    padding: 15px;
+    border-top: 2px solid rgb(77, 3, 54);
+}
+
+#foothead {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+#reflist {
+    border-top: 2px solid rgb(77, 3, 54);
+    padding-top: 10px;
+    padding-left: 25px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+#reflist li {
+    padding-bottom: 5px;
+    font-size: 20;
+}
+
+#reflist a:link, a:visited {
+    color: rgb(61, 1, 131);
+}

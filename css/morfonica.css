@@ -1,0 +1,658 @@
+body {
+    background-color:  #b0dbfa;
+    font-family: newFont;
+    margin: 0;
+}
+
+@font-face {
+    font-family: newFont;
+    src: url("../fonts/OT-tt/Blogger\ Sans-Medium.ttf");
+}
+
+header {
+    background-color: rgb(231, 166, 212);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(77, 3, 54);
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.button {
+    background-color: rgb(231, 166, 212);
+    color: rgb(28, 0, 32);
+    padding: 0 10 0 10;
+    font-size: 70px;
+    height: 70px;
+    border: none;
+}
+ 
+#bands {
+    font-weight: bold;
+    padding: 6 0 0 5;
+    position: relative;
+    top: -12px;
+    left: -15px;
+    display: inline-block;
+}
+  
+#content {
+    display: none;
+    position: absolute;
+    border: 1px solid rgb(77, 3, 54);
+    background-color: rgb(243, 222, 237);
+    min-width: 185px;
+}
+
+.ppp, .afr, .pspr, .rsl, .hhh, .mnc, .ras {
+    border: 1px solid rgb(77, 3, 54);
+}
+  
+#content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#content a:hover {
+    transition: color, font-size 0.1s ease-out 100ms;
+    font-size: 105%;
+    color: white;
+}
+  
+#content .ppp:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #FF3377;
+}
+
+#content .afr:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #E53344;
+}
+
+#content .pspr:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #2dbb90;
+}
+
+#content .rsl:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #3344AA;
+}
+
+#content .hhh:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #ccb101;
+}
+
+#content .mnc:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #33AAFF;
+}
+
+#content .ras:hover {
+    transition: background-color 0.1s ease-out 100ms;
+    background-color: #22CCCC;
+}
+
+#bands:hover #content {
+    display: block;
+}
+  
+#bands:hover .button {
+    background-color: rgb(139, 72, 119);
+}
+
+#bandname {
+    display: flex;
+    position: relative;
+    top: -3px;
+    right: -18px;
+    font-size: 60px;
+    padding-right: 10px;    
+}
+
+#bandicon {
+    position: relative;
+    top: 9px;
+    right: -15px;
+    padding-right: 25px;
+}
+
+#lefthead {
+    display: flex;
+    color: #4f9cd3;
+    padding: 0 0 0 15;
+    float: left;
+}
+
+#righthead {
+    position: relative;
+    top: 2px;
+    overflow: auto;
+    padding-right: 5px;
+    float: right;
+}
+
+#lefthead img, #righthead img {
+    padding-right: 5px;
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+}
+
+#lefthead a:hover img, #righthead a:hover img {
+    opacity: 0.25;
+}
+
+#righthead img {
+    padding: 0 5 0 5;
+}
+
+.yt_en {
+    padding-right: 15px;
+}
+
+.yt {
+    border-radius: 50%;
+}
+
+#banner {
+    text-align: center; 
+    border-bottom: 2px solid #013246;
+}
+
+#banner img {
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+}
+
+#toc {
+    position: relative;
+    font-size: 22;
+    top: 35px;
+    background: white;
+    border: 2px solid #013246;
+    width: 375px;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+}
+
+#tocalign {
+    justify-content: center;
+    display: flex;
+}
+
+#toc1 {
+    color: #b0dbfa;
+    position: relative;
+    font-size: 0;
+    top: 35px;
+    background: #b0dbfa;
+    border: 2px solid #b0dbfa;
+    width: 395px;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+}
+
+#toc1 a{
+    color: #b0dbfa;
+}
+
+#toc ul {
+    position: relative;
+    right: 25px;
+    list-style: none;
+}
+
+#toc a {
+    text-decoration: none;
+}
+
+#toc a:link, #toc a:visited {
+    color: #005694;
+}
+
+#toc li:hover {
+    transition: background-color 0.1s ease-out 50ms;
+    background-color: #daefff;
+}
+
+#band_bg {
+    padding-top: 30px;
+}
+
+#band_bg, #band_media, #band_chars, #band_seiyuus, #band_songs, #band_lives {
+    width: 1300px;
+    margin: auto;
+}
+
+#band_bg h2, #band_media h2, #band_chars h2, #band_seiyuus h2, #band_songs h2, #band_lives h2 {
+    font-size: 36;
+    color: #023b5f;
+}
+
+#band_bg1 {
+    font-size: 0px;
+    position: relative;
+    top: -50px;
+}
+
+#band_media1, #band_chars1, #band_seiyuus1, #band_songs1, #band_lives1  {
+    font-size: 0px;
+    position: relative;
+    top: -85px;     
+}
+
+#desc {
+    background-color: #eaf6fd;
+    width: 1250px;
+    margin: auto;
+    border: 2px solid #013246;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+    font-size: 22;
+}
+
+#cont {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+#cont_third {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+#cont_L {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding-bottom: 0;
+}
+
+#cont h2 {
+    margin-top: 0;
+}
+
+#cont_L h2, #desc h2 {
+    font-size: 30;
+    margin-top: 0;
+}
+
+.filmlive {
+    width: 80%;
+    margin: auto;
+}
+
+#mnkbg {
+    width: 100%;
+    text-align: center;
+}
+
+#mnkbg img {
+    padding: 0 25 0 5;
+}
+
+#story {
+    width: 100%;
+    text-align: center;
+}
+
+.movie {
+    padding-right: 25px;
+    margin-bottom: 10%;
+}
+
+.movie2 {
+    padding-left: 25px;
+    margin-top: 10%;
+}
+
+.char {
+    width: 15%;
+    height: 250px;
+    padding-right: 25px;
+}
+
+#charinfo {
+    position: absolute;
+    font-size: 19;
+}
+
+#actinfo {
+    width: 187;
+    height: 250;
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: .25s ease;
+    background-color: #000000;
+}
+
+#charinfo:hover #actinfo {
+    opacity: 0.75;
+}
+
+#fixing {
+    padding-top: 50%;
+}
+
+#indivdesc {
+    height: 100%;
+    margin: auto;
+}
+
+#indivdesc h2 {
+    margin-top: 0;
+}
+
+.shiro {
+    color: #6677CC;
+}
+
+.toko {
+    color: #EE6666;
+}
+
+.nanami {
+    color: #EE7744;
+}
+
+.tsukushi {
+    color: #EE7788
+}
+
+.rui {
+    color: #669988;
+}
+
+#cont_albums {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#cont_albums img {
+    position: relative;
+    right: 85px;
+    text-align: center;
+}
+
+#cont_albums div {
+    text-align: center;
+}
+
+#songlist_e ul{
+    position: relative;
+    top: -15px;
+    text-align: left;
+    font-size: 20;
+    width: 200%;
+}
+
+#songlist_e li {
+    padding-top: 55px;
+}
+
+#songlist_e div {
+    padding: 50px;
+}
+
+#songlist_e {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    margin: 11 280 25 -90;
+    position: relative;
+    left: 150px;
+    top: -20px;
+}
+
+#songlist_w ul{
+    text-align: left;
+    font-size: 20;
+    width: 200%;
+}
+
+#songlist_w {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 25 -125; 
+}
+
+#audiomm, #audiomm1 {
+    text-align: center;
+    z-index: 1;
+}
+
+#audiomm div, #audiomm1 div{
+    color: #04497a;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#audiomm1 {
+    background-color: #daefff;
+    border: 2px solid #02223a;
+    border-radius: 22px;
+    padding: 13;
+    bottom: 0;
+    right: 0;
+    position: fixed; 
+}
+
+#others_title {
+    font-size: 24;
+}
+
+#others {
+    display: flex;
+    font-size: 20;
+    width: 80%;
+    justify-content: space-between;
+    margin-left: 95px;
+    padding-bottom: 15px;
+}
+
+#covers {
+    display: flex;
+    position: relative;
+    left: 195px;
+    font-size: 20;
+    width: 100%;
+    margin-left: -10px;
+    padding-bottom: 0;
+}
+
+#covers li {
+    padding-top: 5;
+}
+
+#covers div {
+    padding-right: 125px;
+}
+
+#others_orig {
+    display: flex;
+    font-size: 20;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+#others_title {
+    display: flex;
+    width: 65%;
+    padding-left: 50px;
+    justify-content: space-between;
+}
+
+#others_title2 {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.t1 {
+    position: relative; 
+    left: 150px;
+    bottom: 30px;
+}
+
+.t2 {
+    position: relative;
+    bottom: 30px;
+}
+
+#others_list {
+    display: flex;
+    font-size: 20;
+    width: 100%;
+}
+
+#other_cov1 {
+    position: relative;
+    left: 220px;
+    bottom: 25px;
+}
+
+#other_cov2 {
+    position: relative;
+    left: 550px;
+    bottom: 25px;
+}
+
+#livepics {
+    position: relative;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+}
+
+.pic1 {
+    margin: auto;
+}
+
+.pic2 {
+    padding-top: 10px;
+}
+
+#kdhr {
+    position: relative;
+    left: 20px;
+}
+
+#live_list {
+    width: 80%;
+    margin: auto;
+}
+
+#live_list h3 {
+    margin-left: 35px;
+    font-size: 28;
+    text-align: center;
+}
+
+#live_list ul {
+    list-style: none;
+}
+
+#live_list li {
+    margin-bottom: 25px;
+}
+
+#cont_live1 {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+#cont_live2 {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+#ebotitle {
+    color: #04497a;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#ebovid {
+    padding-top: 10px;
+}
+
+.lv30title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.backtotop {
+    font-size: 20;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.backtotop a {
+    color: #043d66;
+}
+
+.backtotop a:hover {
+    color: #267bb8;
+    transition: color 0.2s ease-out 100ms;
+}
+
+footer {
+    margin-top: 25px;
+    background-color: rgb(231, 166, 212);
+    width: 100%;
+    padding: 15px;
+    border-top: 2px solid rgb(77, 3, 54);
+}
+
+#foothead {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+#reflist {
+    border-top: 2px solid rgb(77, 3, 54);
+    padding-top: 10px;
+    padding-left: 25px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+#reflist li {
+    padding-bottom: 5px;
+    font-size: 20;
+}
+
+#reflist a:link, a:visited {
+    color: rgb(61, 1, 131);
+}
